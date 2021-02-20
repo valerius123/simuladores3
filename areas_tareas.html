@@ -1,0 +1,102 @@
+
+<HEAD>
+
+    <SCRIPT LANGUAGE="JavaScript">
+    
+    
+    <!-- Begin
+    function findarea(){
+    radius = document.FORM1.areainput.value;
+    radius2 = eval(radius*radius);
+    answer = eval(Math.PI*Math.pow(radius,2))
+    roundanswer = Math.round(answer);
+    document.FORM1.codegenerator.value =
+     'A = PIR^2\r'
+    +'A = PI x '+radius+'*'+radius+' \r'
+    +'A = PI x '+radius2+'\r'
+    +'A = '+answer+' \r'
+    +'A = '+roundanswer;
+    }
+    function findcircum(){
+    radiuscir = document.FORM1.areainput.value;
+    diameter = eval(radiuscir*2);
+    ciranswer = eval(radiuscir*2*Math.PI);
+    cirRoundanswer = Math.round(ciranswer);
+    document.FORM1.codegenerator.value =
+     'C = 2PIR\r'
+    +'C = PI x 2 x '+radiuscir+' \r'
+    +'C = PI x '+diameter+' \r'
+    +'C = '+ciranswer+' \r'
+    +'C = '+cirRoundanswer;
+    }
+    function rectarea(){
+    side1 = document.FORM1.rect1.value;
+    side2 = document.FORM1.rect2.value;
+    rectanswer = eval(side1*side2);
+    roundrect = Math.round(rectanswer);
+    document.FORM1.codegenerator.value =
+     'A = B x H\r'
+    +'A = '+side1+' x '+side2+' \r'
+    +'A = '+rectanswer+' \r'
+    +'A = '+roundrect
+    }
+    function cylarea(){
+    cylradius = document.FORM1.areainput.value;
+    sqradius = eval(cylradius*cylradius);
+    cylheight = document.FORM1.cylinderheight.value;
+    cylhr = eval(cylheight*sqradius);
+    cylvolume = eval(Math.PI*cylradius*cylradius*cylheight);
+    roundcyl = Math.round(cylvolume);
+    document.FORM1.codegenerator.value =
+     'V = PIR^2H\r'
+    +'V = PI x '+cylradius+' x '+cylradius+' x H \r'
+    +'V = PI x '+sqradius+' x H\r'
+    +'V = PI x '+sqradius+' x '+cylheight+' \r'
+    +'V = PI x '+cylhr+' \r'
+    +'V = '+cylvolume+' \r'
+    +'V = '+roundcyl;
+    }
+    function resetval(){
+    document.FORM1.areainput.value = 'Radio de Circulo/Cilindro';
+    document.FORM1.codegenerator.value = '';
+    document.FORM1.cylinderheight.value = 'Altura de Cilindro';
+    document.FORM1.rect1.value = 'Base';
+    document.FORM1.rect2.value = 'altura';
+    }
+    //  End -->
+    </script>
+    
+    </HEAD>
+    
+    
+    <BODY>
+
+    <div align="center">
+    <form name="FORM1">
+    <font face="Arial, Helvetica, Sans Serif" size="3" color="#0000FF"><b>Introduce el radio de la Circunferencia/Cilindro</b></font><br><input type="text" size="15" name="areainput" onfocus="this.value=''">
+    <br>
+    <input type="button" name="findcircumference" onclick="findcircum()" value="Calcular Circunferencia">
+    <input type="button" name="findarea2" onclick="findarea()" value="Calcular Area">
+    <p>
+    <font face="Arial, Helvetica, Sans Serif" size="3" color="#0000FF"><b>Introduce la Altura del Cilindro</b></font><br><input type="text" name="cylinderheight" onfocus="this.value=''">
+    <br><input type="button" name="cylinderarea" value="Calcular el Volumen del Cilindro" onclick="cylarea()">
+    <br>(<i>Asegurate de haber introducido el radio</i>)
+    <p>
+    <font face="Arial, Helvetica, Sans Serif" size="3" color="#0000FF"><b>El Cálculo y Solución es el siguiente:</b></font><br>
+    <textarea name="codegenerator" rows="10" cols="30">
+    </textarea>
+    <p>
+    <font face="Arial, Helvetica, Sans Serif" size="3" color="#0000FF"><b>Introduce los Valores  para el cálculo de área del Rectángulo:</b></font>
+    <br>
+    <input type="text" name="rect1" value="Base" onfocus="this.value=''">
+    <br><input type="text" name="rect2" value="Altura" onfocus="this.value=''">
+    <br><input type="button" name="findcircumference" onclick="rectarea()" value="Calcular Area">.
+    <br>
+    <input type="button" name="reset" value="Limpiar" onclick="resetval()">
+    </form>
+    </div>
+    
+    
+    
+    </body>
+    </html>
